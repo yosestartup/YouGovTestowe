@@ -20,7 +20,7 @@ class ContactsViewController: BaseViewController {
 
 
     private func createUI() {
-
+        self.view.backgroundColor = UIColor.red
     }
 }
 extension ContactsViewController: ContactsViewProtocol { }
