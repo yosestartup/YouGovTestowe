@@ -5,9 +5,7 @@
 //  Created by Oleksandr Bambulyak on 20/03/2020.
 //  Copyright © 2020 Oleksandr Bambulyak. All rights reserved.
 //
-
 import UIKit
-import SnapKit
 
 class ContactsViewController: BaseViewController {
 
@@ -34,10 +32,16 @@ class ContactsViewController: BaseViewController {
         self.view.addSubview(self.tableView)
         
         self.tableView.allowsSelection = false
+        self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
-        self.tableView.snp.makeConstraints { (make) in
-            make.top.left.right.bottom.equalToSuperview()
-        }
+        
+        let tableViewConstraints = [
+            self.tableView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            self.tableView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
+            self.tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor),
+            self.tableView.rightAnchor.constraint(equalTo: self.view.rightAnchor)
+        ]
+        NSLayoutConstraint.activate(tableViewConstraints)
     }
     
     private func createDataSource() {
