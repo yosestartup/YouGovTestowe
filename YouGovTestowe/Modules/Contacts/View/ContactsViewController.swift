@@ -14,10 +14,16 @@ class ContactsViewController: BaseViewController {
     var presenter: ContactsPresenterProtocol!
     private var tableView: UITableView = UITableView()
     
+    private var contacts: [String: [String]] = ["a": ["alpha", "amega"], "b": ["beta", "boris"], "c": ["centavra", "cypr"]]
+    
+    private var dataSource: ContactsDataSource?
+    private var reuseIdentifier: String = "CellId"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createUI()
-
+        self.createDataSource()
+        self.reloadData()
     }
 
 
@@ -28,11 +34,33 @@ class ContactsViewController: BaseViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         self.view.addSubview(self.tableView)
-        
+    
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         self.tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()
         }
         
+    }
+    
+    private func createDataSource() {
+        self.dataSource = ContactsDataSource(tableView: self.tableView, cellProvider: { (tableView, indexPath, contact) -> UITableViewCell? in
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseIdentifier, for: indexPath)
+            cell.textLabel?.text = contact
+            return cell
+        })
+    }
+    
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<String, String>()
+        
+        let sections = Array(self.contacts.keys.sorted())
+        snapshot.appendSections(sections)
+        
+        for section in sections {
+            snapshot.appendItems(self.contacts[section] ?? [], toSection: section)
+        }
+        
+        dataSource?.apply(snapshot)
     }
 }
 

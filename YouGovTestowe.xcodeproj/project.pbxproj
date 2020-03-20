@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		B1C819B72424DF8D00F45F75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B32424DF8D00F45F75 /* BaseViewController.swift */; };
 		B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */; };
 		B1C819B92424DF8D00F45F75 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B52424DF8D00F45F75 /* BasePresenter.swift */; };
+		B1C819BB24250CA200F45F75 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819BA24250CA200F45F75 /* ContactsDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B1C819B32424DF8D00F45F75 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		B1C819B52424DF8D00F45F75 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		B1C819BA24250CA200F45F75 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
 		D5467DE5170796A1DDC663EA /* Pods-YouGovTestowe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouGovTestowe.release.xcconfig"; path = "Target Support Files/Pods-YouGovTestowe/Pods-YouGovTestowe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +111,6 @@
 				379294405443F60430CA9082 /* Pods-YouGovTestoweTests.debug.xcconfig */,
 				9600F5B997DF4DD26ABB7D8F /* Pods-YouGovTestoweTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -217,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C819A62424DE7500F45F75 /* ContactsViewController.swift */,
+				B1C819BA24250CA200F45F75 /* ContactsDataSource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -429,6 +431,7 @@
 				B1C819B02424DE7500F45F75 /* ContactsInteractor.swift in Sources */,
 				B1C81979242445C000F45F75 /* SceneDelegate.swift in Sources */,
 				B1C819AB2424DE7500F45F75 /* ContactsPresenter.swift in Sources */,
+				B1C819BB24250CA200F45F75 /* ContactsDataSource.swift in Sources */,
 				B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */,
 				B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */,
 			);
