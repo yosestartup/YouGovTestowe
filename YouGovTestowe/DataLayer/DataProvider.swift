@@ -10,11 +10,11 @@ import Foundation
 
 class DataProvider {
     
-    private func deleteDuplicates(from array: [String]) -> [String] {
+    func deleteDuplicates(from array: [String]) -> [String] {
         return Array(Set(array))
     }
     
-    private func makeDictionary(from array: [String]) -> [String: [String]] {
+    func createDictionary(from array: [String]) -> [String: [String]] {
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".lowercased().map({ String($0) })
         var result = [String:[String]]()
         for letter in alphabet {
@@ -31,7 +31,7 @@ class DataProvider {
     
     func getContacts(completion: @escaping ([String : [String]]?) -> Void) {
         let contactsWithoutDuplicates = deleteDuplicates(from: Contacts.names)
-        let contactsDictionary = makeDictionary(from: contactsWithoutDuplicates)
+        let contactsDictionary = createDictionary(from: contactsWithoutDuplicates)
         completion(contactsDictionary)
     }
 }
