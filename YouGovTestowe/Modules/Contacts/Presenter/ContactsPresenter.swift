@@ -6,6 +6,8 @@
 //  Copyright © 2020 Oleksandr Bambulyak. All rights reserved.
 //
 
+import Foundation
+
 class ContactsPresenter: BasePresenter {
 
     weak var view: ContactsViewProtocol?
@@ -20,10 +22,13 @@ class ContactsPresenter: BasePresenter {
 }
 
 extension ContactsPresenter: ContactsPresenterProtocol {
+    
     func viewIsLoaded() {
         self.interactor.fetchContacts { (contacts) in
             if let contacts = contacts {
                 self.view?.insertContacts(dictionary: contacts)
+            } else {
+                self.view?.showOkAlertController(title: "Error", message: "Data is not loaded", callback: nil)
             }
         }
     }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol ContactsViewProtocol: class {
     func insertContacts(dictionary: [String: [String]])
+    func showOkAlertController(title: String?, message: String?, callback: (() -> Void)?)
 }
 
 protocol ContactsWireFrameProtocol: class { }

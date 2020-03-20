@@ -32,7 +32,7 @@ class ContactsViewController: BaseViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         self.view.addSubview(self.tableView)
-    
+        
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         self.tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()
