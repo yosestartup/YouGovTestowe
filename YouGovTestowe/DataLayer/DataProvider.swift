@@ -20,7 +20,7 @@ class DataProvider: DataProviderProtocol {
     }
     
     func createDictionary(from array: [String]) -> [String: [String]] {
-        let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".lowercased().map({ String($0) })
+        let alphabet = array.sorted(by: { $0 < $1 }).compactMap({ $0.first?.lowercased() })
         var result = [String:[String]]()
         for letter in alphabet {
             let matches = array.filter({ $0.hasPrefix(letter) }).sorted()
