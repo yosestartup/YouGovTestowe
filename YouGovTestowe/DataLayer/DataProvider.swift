@@ -10,8 +10,28 @@ import Foundation
 
 class DataProvider {
     
-    let dict: [String: [String]] = ["a": ["alpha", "amega"], "b": ["beta", "boris"], "c": ["centavra", "cypr"]]
+    private func deleteDuplicates(from array: [String]) -> [String] {
+        return Array(Set(array))
+    }
+    
+    private func makeDictionary(from array: [String]) -> [String: [String]] {
+        let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".lowercased().map({ String($0) })
+        var result = [String:[String]]()
+        for letter in alphabet {
+            let matches = array.filter({ $0.hasPrefix(letter) }).sorted()
+            if !matches.isEmpty {
+                result[letter] = []
+                for word in matches {
+                    result[letter]?.append(word)
+                }
+            }
+        }
+        return result
+    }
+    
     func getContacts(completion: @escaping ([String : [String]]?) -> Void) {
-        completion(dict)
+        let contactsWithoutDuplicates = deleteDuplicates(from: Contacts.names)
+        let contactsDictionary = makeDictionary(from: contactsWithoutDuplicates)
+        completion(contactsDictionary)
     }
 }

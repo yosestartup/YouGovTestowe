@@ -29,6 +29,7 @@
 		B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */; };
 		B1C819B92424DF8D00F45F75 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B52424DF8D00F45F75 /* BasePresenter.swift */; };
 		B1C819BB24250CA200F45F75 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819BA24250CA200F45F75 /* ContactsDataSource.swift */; };
+		B1C819BF242513D900F45F75 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819BE242513D900F45F75 /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		B1C819B52424DF8D00F45F75 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		B1C819BA24250CA200F45F75 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
+		B1C819BE242513D900F45F75 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 		D5467DE5170796A1DDC663EA /* Pods-YouGovTestowe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouGovTestowe.release.xcconfig"; path = "Target Support Files/Pods-YouGovTestowe/Pods-YouGovTestowe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C819982424DC3F00F45F75 /* DataProvider.swift */,
+				B1C819C024251B3800F45F75 /* Data */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -248,6 +251,14 @@
 				B1C819B52424DF8D00F45F75 /* BasePresenter.swift */,
 			);
 			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		B1C819C024251B3800F45F75 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819BE242513D900F45F75 /* Contacts.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +439,7 @@
 				B1C819AE2424DE7500F45F75 /* ContactsViewController.swift in Sources */,
 				B1C81977242445C000F45F75 /* AppDelegate.swift in Sources */,
 				B1C819992424DC3F00F45F75 /* DataProvider.swift in Sources */,
+				B1C819BF242513D900F45F75 /* Contacts.swift in Sources */,
 				B1C819B02424DE7500F45F75 /* ContactsInteractor.swift in Sources */,
 				B1C81979242445C000F45F75 /* SceneDelegate.swift in Sources */,
 				B1C819AB2424DE7500F45F75 /* ContactsPresenter.swift in Sources */,
