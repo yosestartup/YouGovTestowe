@@ -8,4 +8,8 @@
 
 class ContactsInteractor: BaseInteractor { }
 
-extension ContactsInteractor: ContactsInteractorProtocol { }
+extension ContactsInteractor: ContactsInteractorProtocol {
+    func fetchContacts(completion: @escaping ([String : [String]]?) -> Void) {
+        self.dataProvider.getContacts(completion: completion)
+    }
+}

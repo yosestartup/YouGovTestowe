@@ -10,4 +10,8 @@ import Foundation
 
 class DataProvider {
     
+    let dict: [String: [String]] = ["a": ["alpha", "amega"], "b": ["beta", "boris"], "c": ["centavra", "cypr"]]
+    func getContacts(completion: @escaping ([String : [String]]?) -> Void) {
+        completion(dict)
+    }
 }

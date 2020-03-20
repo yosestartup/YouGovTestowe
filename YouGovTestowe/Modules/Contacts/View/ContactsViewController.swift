@@ -22,7 +22,7 @@ class ContactsViewController: BaseViewController {
         super.viewDidLoad()
         self.createUI()
         self.createDataSource()
-        self.dataSource?.reloadData()
+        self.presenter.viewIsLoaded()
     }
 
     private func createUI() {
@@ -37,7 +37,6 @@ class ContactsViewController: BaseViewController {
         self.tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()
         }
-        
     }
     
     private func createDataSource() {
@@ -49,5 +48,16 @@ class ContactsViewController: BaseViewController {
     }
 }
 
-extension ContactsViewController: ContactsViewProtocol { }
+extension ContactsViewController: ContactsViewProtocol {
+    
+    func insertContacts(dictionary: [String: [String]]) {
+        self.dataSource?.insertContacts(dictionary: dictionary)
+    }
+}
 
+extension ContactsViewController: ContactsDataSourceDelegate {
+    
+    func reloadTable() {
+        self.tableView.reloadData()
+    }
+}

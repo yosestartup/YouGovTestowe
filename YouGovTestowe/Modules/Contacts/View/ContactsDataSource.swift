@@ -9,16 +9,22 @@
 import Foundation
 import UIKit
 
+protocol ContactsDataSourceDelegate: class {
+    func reloadTable()
+}
+
 class ContactsDataSource: UITableViewDiffableDataSource<String, String> {
     
-    private var contacts: [String: [String]] = ["a": ["alpha", "amega"], "b": ["beta", "boris"], "c": ["centavra", "cypr"]]
+    weak var delegate: ContactsDataSourceDelegate?
+    
+    private var contacts = [String: [String]]()
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let section = self.snapshot().sectionIdentifiers[section]
         return section
     }
     
-    func reloadData() {
+    private func reloadData() {
         var snapshot = NSDiffableDataSourceSnapshot<String, String>()
         
         let sections = Array(self.contacts.keys.sorted())
@@ -29,5 +35,13 @@ class ContactsDataSource: UITableViewDiffableDataSource<String, String> {
         }
         
         self.apply(snapshot)
+    }
+    
+    func insertContacts(dictionary: [String: [String]]) {
+        self.contacts = dictionary
+        self.reloadData()
+        DispatchQueue.main.async {
+            self.delegate?.reloadTable()
+        }
     }
 }

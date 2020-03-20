@@ -19,4 +19,12 @@ class ContactsPresenter: BasePresenter {
     }
 }
 
-extension ContactsPresenter: ContactsPresenterProtocol { }
+extension ContactsPresenter: ContactsPresenterProtocol {
+    func viewIsLoaded() {
+        self.interactor.fetchContacts { (contacts) in
+            if let contacts = contacts {
+                self.view?.insertContacts(dictionary: contacts)
+            }
+        }
+    }
+}

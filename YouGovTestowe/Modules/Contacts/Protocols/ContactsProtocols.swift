@@ -8,11 +8,17 @@
 
 import UIKit
 
-protocol ContactsViewProtocol: class { }
+protocol ContactsViewProtocol: class {
+    func insertContacts(dictionary: [String: [String]])
+}
 
 protocol ContactsWireFrameProtocol: class { }
 
-protocol ContactsPresenterProtocol: class { }
+protocol ContactsPresenterProtocol: class {
+    func viewIsLoaded()
+}
 
-protocol ContactsInteractorProtocol: class { }
+protocol ContactsInteractorProtocol: class {
+    func fetchContacts(completion: @escaping ([String: [String]]?) -> Void)
+}
 
