@@ -16,6 +16,16 @@
 		B1C8198E242445C200F45F75 /* YouGovTestoweTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8198D242445C200F45F75 /* YouGovTestoweTests.swift */; };
 		B1C819992424DC3F00F45F75 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819982424DC3F00F45F75 /* DataProvider.swift */; };
 		B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8199C2424DD5400F45F75 /* DIResolver.swift */; };
+		B1C819AB2424DE7500F45F75 /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819A12424DE7500F45F75 /* ContactsPresenter.swift */; };
+		B1C819AC2424DE7500F45F75 /* ContactsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819A32424DE7500F45F75 /* ContactsWireFrame.swift */; };
+		B1C819AD2424DE7500F45F75 /* Contacts+DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819A42424DE7500F45F75 /* Contacts+DIResolver.swift */; };
+		B1C819AE2424DE7500F45F75 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819A62424DE7500F45F75 /* ContactsViewController.swift */; };
+		B1C819AF2424DE7500F45F75 /* ContactsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819A82424DE7500F45F75 /* ContactsProtocols.swift */; };
+		B1C819B02424DE7500F45F75 /* ContactsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819AA2424DE7500F45F75 /* ContactsInteractor.swift */; };
+		B1C819B62424DF8D00F45F75 /* BaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B22424DF8D00F45F75 /* BaseWireFrame.swift */; };
+		B1C819B72424DF8D00F45F75 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B32424DF8D00F45F75 /* BaseViewController.swift */; };
+		B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */; };
+		B1C819B92424DF8D00F45F75 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819B52424DF8D00F45F75 /* BasePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +52,16 @@
 		B1C8198F242445C200F45F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1C819982424DC3F00F45F75 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		B1C8199C2424DD5400F45F75 /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
+		B1C819A12424DE7500F45F75 /* ContactsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
+		B1C819A32424DE7500F45F75 /* ContactsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsWireFrame.swift; sourceTree = "<group>"; };
+		B1C819A42424DE7500F45F75 /* Contacts+DIResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contacts+DIResolver.swift"; sourceTree = "<group>"; };
+		B1C819A62424DE7500F45F75 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		B1C819A82424DE7500F45F75 /* ContactsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsProtocols.swift; sourceTree = "<group>"; };
+		B1C819AA2424DE7500F45F75 /* ContactsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsInteractor.swift; sourceTree = "<group>"; };
+		B1C819B22424DF8D00F45F75 /* BaseWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireFrame.swift; sourceTree = "<group>"; };
+		B1C819B32424DF8D00F45F75 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		B1C819B52424DF8D00F45F75 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				B1C8199B2424DD3E00F45F75 /* Assembly */,
+				B1C8199E2424DE1700F45F75 /* Modules */,
 				B1C8199A2424DC4500F45F75 /* DataLayer */,
+				B1C819B12424DF8D00F45F75 /* BaseControllers */,
 				B1C81976242445C000F45F75 /* AppDelegate.swift */,
 				B1C81978242445C000F45F75 /* SceneDelegate.swift */,
 				B1C8197A242445C000F45F75 /* ViewController.swift */,
@@ -116,9 +138,81 @@
 		B1C8199B2424DD3E00F45F75 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				B1C819A42424DE7500F45F75 /* Contacts+DIResolver.swift */,
 				B1C8199C2424DD5400F45F75 /* DIResolver.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B1C8199E2424DE1700F45F75 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B1C8199F2424DE7500F45F75 /* Contacts */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B1C8199F2424DE7500F45F75 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819A02424DE7500F45F75 /* Presenter */,
+				B1C819A22424DE7500F45F75 /* WireFrame */,
+				B1C819A52424DE7500F45F75 /* View */,
+				B1C819A72424DE7500F45F75 /* Protocols */,
+				B1C819A92424DE7500F45F75 /* Interactor */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		B1C819A02424DE7500F45F75 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819A12424DE7500F45F75 /* ContactsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B1C819A22424DE7500F45F75 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819A32424DE7500F45F75 /* ContactsWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		B1C819A52424DE7500F45F75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819A62424DE7500F45F75 /* ContactsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1C819A72424DE7500F45F75 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819A82424DE7500F45F75 /* ContactsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B1C819A92424DE7500F45F75 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819AA2424DE7500F45F75 /* ContactsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B1C819B12424DF8D00F45F75 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819B22424DF8D00F45F75 /* BaseWireFrame.swift */,
+				B1C819B32424DF8D00F45F75 /* BaseViewController.swift */,
+				B1C819B42424DF8D00F45F75 /* BaseInteractor.swift */,
+				B1C819B52424DF8D00F45F75 /* BasePresenter.swift */,
+			);
+			path = BaseControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,11 +316,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1C819B72424DF8D00F45F75 /* BaseViewController.swift in Sources */,
+				B1C819B92424DF8D00F45F75 /* BasePresenter.swift in Sources */,
+				B1C819AC2424DE7500F45F75 /* ContactsWireFrame.swift in Sources */,
+				B1C819AF2424DE7500F45F75 /* ContactsProtocols.swift in Sources */,
 				B1C8197B242445C000F45F75 /* ViewController.swift in Sources */,
+				B1C819B62424DF8D00F45F75 /* BaseWireFrame.swift in Sources */,
+				B1C819AD2424DE7500F45F75 /* Contacts+DIResolver.swift in Sources */,
+				B1C819AE2424DE7500F45F75 /* ContactsViewController.swift in Sources */,
 				B1C81977242445C000F45F75 /* AppDelegate.swift in Sources */,
 				B1C819992424DC3F00F45F75 /* DataProvider.swift in Sources */,
+				B1C819B02424DE7500F45F75 /* ContactsInteractor.swift in Sources */,
 				B1C81979242445C000F45F75 /* SceneDelegate.swift in Sources */,
+				B1C819AB2424DE7500F45F75 /* ContactsPresenter.swift in Sources */,
 				B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */,
+				B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
