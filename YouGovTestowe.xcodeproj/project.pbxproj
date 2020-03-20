@@ -14,6 +14,8 @@
 		B1C81980242445C200F45F75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C8197F242445C200F45F75 /* Assets.xcassets */; };
 		B1C81983242445C200F45F75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1C81981242445C200F45F75 /* LaunchScreen.storyboard */; };
 		B1C8198E242445C200F45F75 /* YouGovTestoweTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8198D242445C200F45F75 /* YouGovTestoweTests.swift */; };
+		B1C819992424DC3F00F45F75 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C819982424DC3F00F45F75 /* DataProvider.swift */; };
+		B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8199C2424DD5400F45F75 /* DIResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		B1C81989242445C200F45F75 /* YouGovTestoweTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouGovTestoweTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C8198D242445C200F45F75 /* YouGovTestoweTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouGovTestoweTests.swift; sourceTree = "<group>"; };
 		B1C8198F242445C200F45F75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1C819982424DC3F00F45F75 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		B1C8199C2424DD5400F45F75 /* DIResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		B1C81975242445C000F45F75 /* YouGovTestowe */ = {
 			isa = PBXGroup;
 			children = (
+				B1C8199B2424DD3E00F45F75 /* Assembly */,
+				B1C8199A2424DC4500F45F75 /* DataLayer */,
 				B1C81976242445C000F45F75 /* AppDelegate.swift */,
 				B1C81978242445C000F45F75 /* SceneDelegate.swift */,
 				B1C8197A242445C000F45F75 /* ViewController.swift */,
@@ -97,6 +103,22 @@
 				B1C8198F242445C200F45F75 /* Info.plist */,
 			);
 			path = YouGovTestoweTests;
+			sourceTree = "<group>";
+		};
+		B1C8199A2424DC4500F45F75 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				B1C819982424DC3F00F45F75 /* DataProvider.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		B1C8199B2424DD3E00F45F75 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B1C8199C2424DD5400F45F75 /* DIResolver.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +224,9 @@
 			files = (
 				B1C8197B242445C000F45F75 /* ViewController.swift in Sources */,
 				B1C81977242445C000F45F75 /* AppDelegate.swift in Sources */,
+				B1C819992424DC3F00F45F75 /* DataProvider.swift in Sources */,
 				B1C81979242445C000F45F75 /* SceneDelegate.swift in Sources */,
+				B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
