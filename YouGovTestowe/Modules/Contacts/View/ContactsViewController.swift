@@ -12,9 +12,8 @@ import SnapKit
 class ContactsViewController: BaseViewController {
 
     var presenter: ContactsPresenterProtocol!
-    private var tableView: UITableView = UITableView()
     
-    private var contacts: [String: [String]] = ["a": ["alpha", "amega"], "b": ["beta", "boris"], "c": ["centavra", "cypr"]]
+    private var tableView: UITableView = UITableView()
     
     private var dataSource: ContactsDataSource?
     private var reuseIdentifier: String = "CellId"
@@ -23,9 +22,8 @@ class ContactsViewController: BaseViewController {
         super.viewDidLoad()
         self.createUI()
         self.createDataSource()
-        self.reloadData()
+        self.dataSource?.reloadData()
     }
-
 
     private func createUI() {
         self.view.backgroundColor = UIColor.white
@@ -48,19 +46,6 @@ class ContactsViewController: BaseViewController {
             cell.textLabel?.text = contact
             return cell
         })
-    }
-    
-    private func reloadData() {
-        var snapshot = NSDiffableDataSourceSnapshot<String, String>()
-        
-        let sections = Array(self.contacts.keys.sorted())
-        snapshot.appendSections(sections)
-        
-        for section in sections {
-            snapshot.appendItems(self.contacts[section] ?? [], toSection: section)
-        }
-        
-        dataSource?.apply(snapshot)
     }
 }
 
