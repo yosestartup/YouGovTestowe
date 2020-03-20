@@ -5,13 +5,18 @@
 //  Created by Oleksandr Bambulyak on 20/03/2020.
 //  Copyright © 2020 Oleksandr Bambulyak. All rights reserved.
 //
-
 import Foundation
 
-class DataProvider {
+class DataProvider: DataProviderProtocol {
+    
+    private var contacts: [String] = [String]()
+    
+    init(array: [String]) {
+        self.contacts = array
+    }
     
     func deleteDuplicates(from array: [String]) -> [String] {
-        return Array(Set(array))
+        return Array(Set(array.compactMap({$0.lowercased()})))
     }
     
     func createDictionary(from array: [String]) -> [String: [String]] {
@@ -30,7 +35,7 @@ class DataProvider {
     }
     
     func getContacts(completion: @escaping ([String : [String]]?) -> Void) {
-        let contactsWithoutDuplicates = deleteDuplicates(from: Contacts.names)
+        let contactsWithoutDuplicates = deleteDuplicates(from: contacts)
         let contactsDictionary = createDictionary(from: contactsWithoutDuplicates)
         completion(contactsDictionary)
     }

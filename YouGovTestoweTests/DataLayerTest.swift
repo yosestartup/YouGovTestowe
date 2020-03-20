@@ -11,7 +11,7 @@ import XCTest
 
 class DataLayerTest: XCTestCase {
 
-    var dataProvider = DataProvider()
+    var dataProvider: DataProvider! = nil
     var wordsWithDuplicates: [String]! = nil
     var wordsWithoutDuplicates: [String]! = nil
     var wordsDividedDictionary: [String: [String]]! = nil
@@ -19,8 +19,13 @@ class DataLayerTest: XCTestCase {
     override func setUp() {
         self.wordsWithDuplicates = ["alarm", "amanda", "alarm", "zero", "bobby", "spectrum", "spectrum", "saturn", "bobcat", "cook", "cook", "cook", "amanda", "certificate"]
         self.wordsWithoutDuplicates = ["alarm", "zero", "bobby", "spectrum", "saturn", "bobcat", "cook", "amanda", "certificate"]
+        self.wordsDividedDictionary = ["a":["alarm", "amanda"],
+                                       "b": ["bobby", "bobcat"],
+                                       "c": ["certificate", "cook"],
+                                       "s": ["saturn", "spectrum"],
+                                       "z": ["zero"]]
         
-        self.wordsDividedDictionary = ["a":["alarm", "amanda"], "b": ["bobby", "bobcat"], "c": ["certificate", "cook"], "s": ["saturn", "spectrum"], "z": ["zero"]]
+        self.dataProvider = DataProvider(array: self.wordsWithoutDuplicates)
     }
 
     override func tearDown() {
@@ -39,8 +44,17 @@ class DataLayerTest: XCTestCase {
     }
     
     func testGettingContacts() {
-//        let createdDictionary = dataProvider.createDictionary(from: self.wordsWithoutDuplicates)
-//        XCTAssertEqual(self.wordsDividedDictionary, createdDictionary, "WRONG RESULT. Bad created dictionary")
+        let dictionaryPromise = expectation(description: "Dictionary successfully created")
+        self.dataProvider.getContacts { (contactsDictionary) in
+            
+            if let contactsDictionary = contactsDictionary {
+                if(contactsDictionary == self.wordsDividedDictionary) {
+                    dictionaryPromise.fulfill()
+                } else {
+                    XCTFail("WRONG RESULT. Bad created dictionary")
+                }
+            }
+        }
+        wait(for: [dictionaryPromise], timeout: 3)
     }
-    
 }

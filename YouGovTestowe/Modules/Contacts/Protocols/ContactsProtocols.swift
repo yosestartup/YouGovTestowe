@@ -16,7 +16,7 @@ protocol ContactsViewProtocol: class {
 protocol ContactsWireFrameProtocol: class { }
 
 protocol ContactsPresenterProtocol: class {
-    func viewIsLoaded()
+    func viewDidLoad()
 }
 
 protocol ContactsInteractorProtocol: class {

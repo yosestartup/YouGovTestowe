@@ -31,7 +31,8 @@ class ContactsDataSource: UITableViewDiffableDataSource<String, String> {
         snapshot.appendSections(sections)
         
         for section in sections {
-            snapshot.appendItems(self.contacts[section] ?? [], toSection: section)
+            guard let contacts = self.contacts[section] else { continue }
+            snapshot.appendItems(contacts, toSection: section)
         }
         
         self.apply(snapshot)

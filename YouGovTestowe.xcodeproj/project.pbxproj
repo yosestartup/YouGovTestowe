@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		541BC435F9AA18E6AF473033 /* Pods_YouGovTestoweTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF4B4494A8E8FC538E4C31B /* Pods_YouGovTestoweTests.framework */; };
 		56985E11AA10810C99057CCC /* Pods_YouGovTestowe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE405490EF15C9480463739A /* Pods_YouGovTestowe.framework */; };
+		B172ECDF24257A00006DE64B /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B172ECDE242579FF006DE64B /* DataProviderProtocol.swift */; };
 		B1C81977242445C000F45F75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C81976242445C000F45F75 /* AppDelegate.swift */; };
 		B1C81979242445C000F45F75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C81978242445C000F45F75 /* SceneDelegate.swift */; };
 		B1C8197B242445C000F45F75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C8197A242445C000F45F75 /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		8DF4B4494A8E8FC538E4C31B /* Pods_YouGovTestoweTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouGovTestoweTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9600F5B997DF4DD26ABB7D8F /* Pods-YouGovTestoweTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouGovTestoweTests.release.xcconfig"; path = "Target Support Files/Pods-YouGovTestoweTests/Pods-YouGovTestoweTests.release.xcconfig"; sourceTree = "<group>"; };
 		AE405490EF15C9480463739A /* Pods_YouGovTestowe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouGovTestowe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B172ECDE242579FF006DE64B /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		B1C81973242445C000F45F75 /* YouGovTestowe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouGovTestowe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C81976242445C000F45F75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B1C81978242445C000F45F75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				B1C819982424DC3F00F45F75 /* DataProvider.swift */,
+				B172ECDE242579FF006DE64B /* DataProviderProtocol.swift */,
 				B1C819C024251B3800F45F75 /* Data */,
 			);
 			path = DataLayer;
@@ -192,10 +195,10 @@
 		B1C8199F2424DE7500F45F75 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				B1C819A72424DE7500F45F75 /* Protocols */,
+				B1C819A52424DE7500F45F75 /* View */,
 				B1C819A02424DE7500F45F75 /* Presenter */,
 				B1C819A22424DE7500F45F75 /* WireFrame */,
-				B1C819A52424DE7500F45F75 /* View */,
-				B1C819A72424DE7500F45F75 /* Protocols */,
 				B1C819A92424DE7500F45F75 /* Interactor */,
 			);
 			path = Contacts;
@@ -445,6 +448,7 @@
 				B1C819AB2424DE7500F45F75 /* ContactsPresenter.swift in Sources */,
 				B1C819BB24250CA200F45F75 /* ContactsDataSource.swift in Sources */,
 				B1C8199D2424DD5400F45F75 /* DIResolver.swift in Sources */,
+				B172ECDF24257A00006DE64B /* DataProviderProtocol.swift in Sources */,
 				B1C819B82424DF8D00F45F75 /* BaseInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

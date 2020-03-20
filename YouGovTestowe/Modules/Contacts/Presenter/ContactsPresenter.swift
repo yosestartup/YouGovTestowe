@@ -23,7 +23,7 @@ class ContactsPresenter: BasePresenter {
 
 extension ContactsPresenter: ContactsPresenterProtocol {
     
-    func viewIsLoaded() {
+    func viewDidLoad() {
         self.interactor.fetchContacts { (contacts) in
             if let contacts = contacts {
                 self.view?.insertContacts(dictionary: contacts)

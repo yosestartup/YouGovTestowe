@@ -22,7 +22,7 @@ class ContactsViewController: BaseViewController {
         super.viewDidLoad()
         self.createUI()
         self.createDataSource()
-        self.presenter.viewIsLoaded()
+        self.presenter.viewDidLoad()
     }
 
     private func createUI() {
@@ -33,7 +33,8 @@ class ContactsViewController: BaseViewController {
         
         self.view.addSubview(self.tableView)
         
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        self.tableView.allowsSelection = false
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.reuseIdentifier)
         self.tableView.snp.makeConstraints { (make) in
             make.top.left.right.bottom.equalToSuperview()
         }
