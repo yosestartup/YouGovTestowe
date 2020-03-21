@@ -53,6 +53,8 @@ class DataLayerTest: XCTestCase {
                 } else {
                     XCTFail("WRONG RESULT. Bad created dictionary")
                 }
+            } else {
+                XCTFail("WRONG RESULT. Dictionary didn't received")
             }
         }
         wait(for: [dictionaryPromise], timeout: 3)
