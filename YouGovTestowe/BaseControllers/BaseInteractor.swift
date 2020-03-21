@@ -10,9 +10,9 @@ import UIKit
 
 class BaseInteractor {
 
-    var dataProvider: DataProvider! = nil
+    var dataProvider: DataProviderProtocol! = nil
 
-    init(dataProvider: DataProvider) {
+    init(dataProvider: DataProviderProtocol) {
         self.dataProvider = dataProvider
     }
 }

@@ -11,10 +11,10 @@ import Foundation
 // MARK: - DIResolver
 class DIResolver {
 
-    let dataProvider: DataProvider
+    let dataProvider: DataProviderProtocol
 
     // MARK: - Init
-    init(dataProvider: DataProvider) {
+    init(dataProvider: DataProviderProtocol) {
         self.dataProvider = dataProvider
     }
 
